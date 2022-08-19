@@ -51,6 +51,14 @@ s2.end_date
 from
 subscriptions as s1
 cross join subscriptions as s2
+
+/* we will use the cross join because 
+it will join the tables on all combinations 
+using, in our case we will have total 12 combinations (4X4) cross
+later we will remove the same userid from the table, 
+we will later only keep the user ids where subscription
+days overlap */
+
 where s1.user_id != s2.user_id
 and ((s2.start_date between s1.start_date and s1.end_date) 
 OR (s2.end_date between s1.start_date and s1.end_date))
