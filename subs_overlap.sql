@@ -81,7 +81,10 @@ on user_id = first_user;
 
 
 
-/* will not work now but will work later */
+/* will not work now but will work later
+
+this is not a part of the code. This will only 
+help us understand the code */
 select *
 from distinct_user; 
 
